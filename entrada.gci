@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+use CGI;
+use DBI;
+
+my $usuario = param('usuario');
+my $clave   = param(clave);
+
+my $dsn = 'DBI:mysql:host=localhost;database=EIE115'
+
+print "Content-Type: text/html\n\n";
+
+if (!$dbh){
+    
+} else {
+    $page<<HTML_ERROR;
+}
