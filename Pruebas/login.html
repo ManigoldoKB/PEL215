@@ -1,0 +1,34 @@
+
+<!DocType html>
+<html>
+<head>
+        <script language="JavaScript">
+                        function validar(form)
+                        {
+                                var user = form.usuario.value;
+                                var pwd  = form[1].value;
+
+                                if (user === pwd) {
+                                        alert('El usuario y clave no pueden ser iguales!');
+                                        return false;
+                                }
+    
+                                else {
+                                        return true;
+                                }
+
+                        }
+        </script>
+</head>
+<body>
+        <form name="login" action="/cgi-bin/entrar.cgi" method="post" onSubmit="return validar(this);">
+                <table>
+                        <tr><th>Usuario:</th><td><input type="text" name="usuario" length="25" id="userId" placeholder="Su nombre de usuario"  required pattern="[A-Za-z0-9]{5,40}"  title
+="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40" ></td></tr>
+                        <tr><th>Clave:</th><td><input type="password" name="clave" length="25"></td></tr>
+                        <tr><td colspan="2"><center><input type="submit" value="Entrar" length="25"></center></td></tr>
+                </table>
+
+        </form>
+</body>
+</html>
